@@ -1,0 +1,20 @@
+{
+    "name": "F4Y",
+    "version": 2,
+    "public": true,
+    "builds":[
+
+        {
+            "src":".dist/src/server.js",
+            "use": "vercel/node"
+        }
+    ],
+    
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "dist/src/routes/sector.routes.ts"
+        }, 
+        { "src": "/sectors", "dest": "dist/src/routes/sector.routes.ts" }
+    ]
+}
